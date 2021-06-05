@@ -52,7 +52,7 @@ class AgendaEventItem extends Component {
             eventItemTemplate = eventItemTemplateResolver(schedulerData, eventItem, bgColor, isStart, isEnd, 'event-item', config.eventItemHeight, config.agendaMaxEventWidth);
 
         return ( config.eventItemPopoverEnabled ?
-                <Popover placement="bottomLeft" content={content} trigger="hover">
+                <Popover placement="bottomRight" content={content} trigger="hover">
                     <a className="day-event" onClick={() => { if(!!eventItemClick) eventItemClick(schedulerData, eventItem);}}>
                         {eventItemTemplate}
                     </a>
